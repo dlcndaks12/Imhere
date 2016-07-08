@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.almond.imhere.service.MyService;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -11,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent("com.almond.imhere.service.MyService");
-
+        Intent intent = new Intent(this, MyService.class);
+        startService(intent);
     }
 }
